@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
-int
-main(int argc, char **argv)
+#ifndef VERSION
+#define VERSION "0.1.1"
+#endif
+
+int main(int argc, char **argv)
 {
     if (argc == 2) {
-        printf("usage: hello [-n name]\n");
+        if (strcmp(argv[1], "-V") == 0) {
+            printf("hello %s\n", VERSION);
+            return 0;
+        }
+        printf("usage: hello [-V] [-n name]\n");
         return 1;
     }
     if (argc == 3) {

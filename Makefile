@@ -9,20 +9,21 @@ BINDIR ?= /bin
 
 INSTALL_TARGET := $(DESTDIR)$(PREFIX)$(BINDIR)
 
+VERSION = $(shell git describe --tags --abbrev=0 2>/dev/null || echo "0.1.1")
 CC ?= cc
-CFLAGS ?= -std=c89 -Wall -Wextra -Werror
+CFLAGS ?= -std=c89 -Wall -Wextra -Werror -DVERSION=\"$(VERSION)\"
 
 TAR ?= tar
 RM ?= rm
 
-DISTDIR = hello-0.1.0
+DISTDIR = hello-$(VERSION)
 DISTFILE = $(DISTDIR).tar.xz
 
 $(TARGET): $(SRCS)
 	$(CC) $(SRCS) -o $(TARGET) $(CFLAGS)
 
 install:
-	install -dm755 $(TARGET) $(INSTALL_TARGET)/$(TARGET)
+	install -Dm755 $(TARGET) $(INSTALL_TARGET)/$(TARGET)
 
 clean:
 	rm -f $(TARGET)
