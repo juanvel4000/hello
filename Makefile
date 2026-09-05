@@ -14,7 +14,7 @@ MANDIR ?= /share/man/man1
 INSTALL_TARGET := $(DESTDIR)$(PREFIX)$(BINDIR)
 INSTALL_DOC_TARGET := $(DESTDIR)$(PREFIX)$(MANDIR)
 
-VERSION = $(shell git describe --tags --abbrev=0 2>/dev/null || echo "0.1.2")
+VERSION := $(shell git describe --tags --abbrev=0 2>/dev/null | sed 's/^v//' || echo "0.1.2")
 CC ?= cc
 CFLAGS ?= -std=c89 -Wall -Wextra -Werror -DVERSION=\"$(VERSION)\"
 

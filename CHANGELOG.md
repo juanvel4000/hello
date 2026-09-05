@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/2.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-09-05
+
+### Changed
+
+- use `getopt(3)` in `hello.c`
+- trim the `v` from version tags in `Makefile`
+
+### Fixed
+
+- fix formatting issues in `hello.1`
 ## [0.1.2] - 2026-09-05
 
 ### Added
@@ -13,9 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- fixed inconsistencies in README.md
-- fixed specifications in CONTRIBUTING.md
-- fixed usage syntax in hello.c
+- fix inconsistencies in `README.md`
+- fix specifications in `CONTRIBUTING.md`
+- fix usage syntax in `hello.c`
 
 ## [0.1.1] - 2026-09-05
 

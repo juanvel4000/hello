@@ -6,13 +6,11 @@
 .Nd simple hello world program
 .Sh SYNOPSIS
 .Nm
-.Op Ar -V
-.Op Ar -n name
+.Op Fl V
+.Op Fl n Ar name
 .Sh DESCRIPTION
 .Nm
-is a simple program written in C that prints a
-.Ql Hello, World!
-string to stdout.
+is a simple program written in C that prints a familiar, friendly greeting to stdout.
 
 .Sh OPTIONS
 
@@ -23,10 +21,13 @@ specify
 .Ar name
 as the name in the greeting.
 
+the default name is
+.Ql World .
+
 .It Fl V
-show the
+print the
 .Nm
-version
+version and exit.
 
 .El
 
