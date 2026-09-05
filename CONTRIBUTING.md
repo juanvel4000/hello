@@ -1,4 +1,4 @@
-: contributing to hello
+# contributing to hello
 
 hello is maintained on [sourcehut](https://sr.ht/~juanvel400/hello) -- this document explains how to report bugs and send patches there.
 

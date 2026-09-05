@@ -1,0 +1,38 @@
+.Dd September 2026
+.Dt HELLO 1
+.Os
+.Sh NAME
+.Nm hello
+.Nd simple hello world program
+.Sh SYNOPSIS
+.Nm
+.Op Ar -V
+.Op Ar -n name
+.Sh DESCRIPTION
+.Nm
+is a simple program written in C that prints a
+.Ql Hello, World!
+string to stdout.
+
+.Sh OPTIONS
+
+.Bl -tag -width Ds
+
+.It Fl n Ar name
+specify
+.Ar name
+as the name in the greeting.
+
+.It Fl V
+show the
+.Nm
+version
+
+.El
+
+.Sh SEE ALSO
+.Xr stdio 3 ,
+.Xr string 3 
+
+.Sh LICENSE
+BSD-3-Clause, see the source code for details.

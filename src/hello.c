@@ -2,7 +2,7 @@
 #include <string.h>
 
 #ifndef VERSION
-#define VERSION "0.1.1"
+#define VERSION "0.1.2"
 #endif
 
 int main(int argc, char **argv)
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
             printf("Hello, %s!\n", argv[2]);
             return 0;
         }
-        printf("usage: hello [-n name]\n");
+        printf("usage: hello [-V] [-n name]\n");
         return 1;
     }
     printf("Hello, World!\n");
